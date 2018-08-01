@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> EventSource.ca |  Karen Jacobs Consulting Dashboard
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="css/jquery-ui.min.css" rel="stylesheet">-->
+	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
+	<link href="css/bootstrap-timepicker.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<!--<link href="css/mdb.min.css" rel="stylesheet">-->
+	<!-- Select2 -->
+	<link href="css/select2.css" rel="stylesheet" />
+	<link href="css/jquery.gridly.css" rel="stylesheet" />
+	<link href="css/jquery.fancybox.min.css" rel="stylesheet" />
+	<!-- FontAwesome 5 -->
+	<link href="css/fontawesome.css" rel="stylesheet">
+	<!-- barberpole styles   -->
+	<link href="css/barberpole.css" rel="stylesheet">
+	<!-- Your custom styles (optional) -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- ckeditor -->
+	<script  src="js/ckeditor/ckeditor.js"></script>
+
+
+</head>
+
+<body>
+	<div class="alert alert-danger text-center" role="alert">
+		<div class="container">
+			<div class="row  ">
+				<div class="col hidden-xs">
+					<span class="alert-icon-wrap "><i class="fas fa-exclamation"></i></span> Upgrade your Account in order to
+					unlock all EventSource features. Your access is currently limited.
+					<button type="button" class="close"   aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="col visible-xs">
+					Upgrade your Account to unlock all features
+					<button type="button" class="close"   aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Start your project here-->
+	<header id="masthead" class="site-header logged"  >
+
+
+		<nav class="navbar navbar-default top-nav">
+			<div class="container">
+				<div class="col col-9 col-sm-3 navbar-header">
+					<div class="row">
+                    <!--<button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggle main-toggle collapsed" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="btn btn-blue pull-right visible-xs visible-sm mt20">Get Listed</a>-->
+                    <a class="navbar-brand" href="#">
+                    	<img src="img/svg/pro-network-logo.svg" alt="EventSource">
+                    </a>
+                </div>
+            </div>
+            <div class=" col col-sm-2 upgarde-link">
+            	<a href="#">Get more exposure<br/>
+            		<span>Upgrade Now!</span></a>
+
+            	</div>
+            	<div id="main-menu" class="col col-3 col-sm-7 navbar-collapse" aria-expanded="false">
+            		<div class="header-top-right">
+            			<div class="dropdown-wrap vendor-profile">
+            				<a href="javascript:;" class="vend-name">
+
+            					<div class="listing-name">
+            						<i class="fas fa-caret-down"></i> Karen Jacobs Consulting
+            					</div>
+            					<img id="VendorTopPane_imgPhoto" onerror="onErrorUserLogo(this)" src="https://www.torontocaterers.ca/listings/KarenJacobsConsulting/logo/logo.png?636661447625444156">
+            				</a>
+            				<div class="dropdown-menu" role="menu">
+            					<div class="dropdown-header">
+            						<span class="vendor-name">Karen Jacobs Consulting</span>
+            						<div>
+            							<a class="view-profile" href="#">View my profile </a>                   <div class="acount-details"><a href="https://www.torontocaterers.ca/vendor/dashboard.aspx"> Account</a>         <a href="https://www.torontocaterers.ca/auth/logout.aspx">Log out</a></div>
+            						</div>
+            					</div>
+            					<div class="dropdown-content">
+            						<a class="col col-6" href="#"> <i class="fal fa-tachometer"></i> <span>Dashboard  </span> </a>
+            						<a class="col col-6 active" href="#" > <i class="fal fa-store"></i> <span>Profile  </span> </a>
+            						<a class="col col-6" href="#"> <i class="fal fa-box-usd"></i> <span>Deals & Packages  </span> </a>
+            						<a class="col col-6" href="#"> <i class="fal fa-star"></i> <span>Reviews  </span> </a>
+            					</div>
+            					<div>
+            						<a  class="dropdown-footer" href="account.html">Upgrade Now!</a>
+            					</div>
+
+            				</div>
+            			</div>
+            		</div>
+            		<ul class="nav  primary-nav ">
+            			<li class="primary-nav-item"><a href="">Why EventSource.CA? </a></li>
+            			<li class="primary-nav-item"><a href="">Industry Corner</a></li>
+            			<li class="primary-nav-item"><a href="#" >Upcoming Events</a></li>
+
+            		</ul>
+
+            	</div>
+            	<div id="toggle">
+            		<span></span>
+
+
+            	</div>
+            </div>
+            <!--<div id="search-suggestions">
+                <div class="container search-container">
+                    <i class="fa fa-search"></i>
+                    <input name="searchType" type="hidden">
+                    <input name="searchId" type="hidden">
+                    <input name="search" value="3" type="hidden">
+                    <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="typeahead txtSearch tt-hint" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: rgb(255, 255, 255) none repeat scroll 0% 0%;" readonly="readonly" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" type="text"><input class="typeahead txtSearch tt-input" name="listingName" placeholder="What are you searching for?" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" type="text"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Open Sans,sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-accounts"></div></div></span>
+                    <a class="close-ss" href="#"><i class="fa fa-times-thin"></i></a>
+                </div>
+            </div>-->
+        </nav>
+        <nav class="navbar bottom-navigation">
+        	<div class="container">
+        		<ul class="secondary-nav">
+        			<li class="secondary-nav-item"><a href="#"><i class="fal fa-tachometer"></i> Dashboard</a></li>
+        			<li class="secondary-nav-item "><a href="#"><i class="fal fa-store"></i> Profile</a></li>
+        			<li class="secondary-nav-item"><a href="account.html"><i class="fal fa-cog"></i> Account</a></li>
+        			<li class="secondary-nav-item active"><a href="#"><i class="fal fa-box-usd"></i> DealS & packages</a></li>
+        			<li class="secondary-nav-item"><a href="#"><i class="fal fa-star"></i> Reviews</a></li>
+        			<li class="secondary-nav-item"><a href="badges.html"><i class="fal fa-award"></i> badges</a></li>
+        			<li class="secondary-nav-item"><a href="#"><i class="fal fa-comment"></i> inquires</a></li>
+        		</ul>
+        		<div class="profile-progress">
+        			<p class="progress-text">Profile Completion: <span>0%</span></p>
+        			<div class="progress">
+        				<div class="progress-bar  progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"  style="width:0%"></div>
+
+
+        			</div>
+        		</div>
+        	</div>
+
+        </nav>
+        <div id="popout">
+
+        	<div class="popout-inner">
+        		<div class="back-link">
+        			<a href="#" >&lt; Back to EventSource.ca</a>
+        		</div>
+        		<ul class="nav  mobile-nav ">
+        			<li class="primary-nav-item"><a href="">Why EventSource.CA? </a></li>
+        			<li class="primary-nav-item"><a href="">Industry Corner</a></li>
+        			<li class="primary-nav-item"><a href="#" >Upcoming Events</a></li>
+
+        		</ul>
+        	</div>
+        </div>
+    </header>
+    <section class="page-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col col-12 col-sm-12 col-md-12 col-lg-3   left-column">
+
+    				<ul class="nav  md-pills pills-primary flex-column" role="tablist">
+    					<li class="nav-item">
+    						<a class="nav-link  active" data-toggle="tab" href="#panel21" role="tab"><i class="fal fa-box-usd"></i> Deal & Packages</a>
+    					</li>
+    					<li class="nav-item">
+    						<a class="nav-link" data-toggle="tab" href="#panel22" role="tab"><i class="fal fa-tag"></i>Add a Deal</a>
+    					</li>
+    					<li class="nav-item">
+    						<a class="nav-link" data-toggle="tab" href="#panel23" role="tab"><i class="fal fa-usd-square"></i> Add a Package </a>
+    					</li>
+    				</ul>
+
+
+    				<div class="wrapper-dropdwn">
+    					<div id="dd" class="wrapper-dropdown-2" tabindex="1"><span><i class="fal fa-box-usd"></i> Deal & Packages</span>
+    						<ul class="dropdown">
+    							<li><a data-toggle="tab" href="#panel21" role="tab"><i class="fal fa-box-usd"></i> Deal & Packages</a> </li>
+    							<li><a data-toggle="tab" href="#panel22" role="tab"><i class="fal fa-tag"></i> Add a Deal</a></li>
+    							<li><a data-toggle="tab" href="#panel23" role="tab"><i class="fal fa-usd-square"></i>Add a Package </a> </li>
+
+    						</ul>
+    					</div>
+    				</div>
+
+
+    			</div>
+    			<div class="col col-12 col-sm-12 col-md-12 col-lg-9 right-column">
+    				<!-- Tab panels -->
+    				<div class="tab-content vertical">
+    					<!--Panel 1-->
+    					<div class="tab-pane fade  in show active " id="panel21" role="tabpanel">
+
+    						<h3 class="my-2 h5"><span><i class="fal fa-box-usd"></i></span> Deal & Packages</h3>
+
+    						<div class="tab-content hidden-xs">
+    							<p>One of the best ways to build online trust is through Reviews. Best of all, the more you have, the higher your placement. You can also use the “reply” feature to thank Clients or to respond constructively to any concerns that may arise. To get more reviews, try the <a href="#">get reviews </a>feature.</p>
+    						</div>
+
+
+    						<div class="profile-outer deals-block row">
+    							<div class=" left-wide">
+    								<div class="profile-details-form deals-form">
+    									<h2>Current Deals</h2>
+    									<p> You are currently not running any deals</p>
+    									<a href="#" class="btn-submit"  data-toggle="tab" href="#panel22" role="tab" >Add a deal</a>
+    									<hr>
+    									<h2>Current Packages</h2>
+    									<p>You currently don’t have any packages added</p>
+    									<a href="#" class="btn-submit add-package" data-toggle="tab" href="#panel23" role="tab">Add a Package</a>
+    								</div>
+
+
+    							</div>
+    							<div class=" right-narrow profile-side-info ">
+    								<p class="helpful-tips">Helpful tips</p>
+    								<img src="img/deals.png" alt="">
+    								<h3>Deals & Packages</h3>
+    								<p>One of the best ways to increase traffic and conversions to your profile is by offering special deals and packages. </p>
+
+    								<p>A deal lets you offer an incentive to your Clients. It provides a strong and immediate call to action. For example, let’s say you have a prime weekend still available at a reduced or simply wish to offer Clients a discount. You can use this feature to offer any form of incentive.</p>
+
+    								<p>Packages are used for to display the pricing of your day-to-day services. Be sure to give Clients a good sense of your offerings by utilizing this feature.</p>
+    							</div>
+
+    						</div>
+
+
+    					</div>
+    					<!--/.Panel 1-->
+
+    					<!--Panel 2-->
+    					<div class="tab-pane fade" id="panel22" role="tabpanel">
+
+
+    						<div class=" nav nav-wizard">
+    							<div class="stepwizard">
+    								<div class="stepwizard-row setup-panel wizard">
+    									<div class="stepwizard-step">
+    										<a href="#step-1" class=" active btn-circle">Deal Details</a>
+
+
+    										<a href="#step-2"  class="  btn-circle"  >Checkout</a>
+
+
+    										<a href="#step-3"  class="  btn-circle"  >Confirmation</a>
+
+
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+
+    						<form role="form" class="steps-form profile-outer deals-block  ">
+
+
+    							<div class="panel panel-primary setup-content col-sm-12 " id="step-1">
+    								<div class="row">
+    									<div class=" left-wide">
+    										<div class="deal-details-form">
+    											<div class="panel-heading">
+    												<h3 class="panel-title">Add a Deal</h3>
+    											</div>
+    											<div class="panel-body deal-group">
+    												<div class="form-group-wrap">
+    													<div class="form-group add-deal-group">
+    														<span class="is-loading"></span>
+    														<input name="dealTitle" placeholder="Deal Title" type="text" id="dealTitle" class="form-control dealTitle required" ata-placement="bottom" title="Enter your title">
+    														<span class="input-bottom"></span>
+    														<i class="fa fa-check color--green "></i></div>
+    														<a class="deals-popover" data-toggle="popover" data-original-title="" title=""><i class="fa fa-question"></i></a>
+    													</div>
+
+    												</div>
+    												<div class="form-group-wrap">
+    													<div class="form-group  add-deal-group">
+
+    														<textarea name="dealDescription" rows="4" cols="20" id="dealDescription" class="form-control  dealDescription required" placeholder="Description" data-placement="bottom" title="Enter your description"></textarea>
+
+    													</div>
+    													<a class="deals-popover" data-toggle="popover" data-original-title="" title=""><i class="fa fa-question"></i></a>
+    												</div>
+    												<div class="form-group-wrap">
+    													<div class="form-group add-deal-group ">
+    														<span class="label label-info upload-file" id="upload-file2">Upload photo</span>
+    														<label class="btn-add upload form-control" for="my-logo-selector">
+    															<input id="my-logo-selector" type="file" accept="image/*" style="display:none"
+    															onchange="$('#upload-file-logo').html(this.files[0].name)">
+    															Upload
+    														</label>
+
+    													</div>
+    													<p class="photo-size-label sup">Photo size should be a minimum of 375 x 375 pixels</p>
+    												</div>
+
+    												<div class="form-group-wrap">
+    													<p><strong>What kind of discount would you like to offer?</strong>   <a class="deals-popover" data-toggle="popover" data-original-title="" title=""><i class="fa fa-question"></i></a></p>
+
+    													<div class="form-group  ">
+    														<div class="input-check-group">
+    															<div class="with-radio">
+
+    																<div class="input-wrap label-checkbox">
+    																	<input type="radio" name="group_28" class="ignore" data-val="yes" id="rb_Yes28" data-field="answer_125">
+    																	<label for="rb_Yes28">Percentage Discount </label>
+    																</div>
+
+    																<div class="input-wrap label-checkbox">
+    																	<input type="radio" name="group_27" class="ignore" data-val="no" id="rb_No28" data-field="answer_125">
+    																	<label for="rb_No28">Dollar Discount </label>
+    																</div>
+
+    															</div>
+
+    														</div>
+    													</div>
+    												</div>
+    												<div class="form-group price-group">
+    													<label for="cphBody_tbxRegularPrice" id="cphBody_lblRegularPrice">Regular Price</label>
+    													<span class="inline-el">$</span>
+    													<input name="ctl00$cphBody$tbxRegularPrice" type="text" id="cphBody_tbxRegularPrice" class="regularPrice form-control price-control" data-placement="bottom" placeholder="ex. 1000">
+    												</div>
+
+    												<div class="form-group price-group">
+    													<label for="cphBody_tbxDiscountedPrice" id="cphBody_lblDiscountedPrice">Discounted Price</label>
+    													<span class="inline-el">$</span>
+    													<input name="ctl00$cphBody$tbxDiscountedPrice" type="text" id="cphBody_tbxDiscountedPrice" class="discountedPrice form-control price-control" data-placement="bottom" placeholder="ex. 750">
+    												</div>
+    												<div class="form-group">
+    													<label for="cphBody_tbxMonthsCounter" id="cphBody_lblMonthsCounter">How many months would you like to display your deal?</label>
+    													<div class="input-group deal-months-counter">
+    														<a href="javascript:;" class="input-group-addon btn-minuse"><span class="glyphicon glyphicon-minus"></span></a>
+    														<input type="hidden" name="ctl00$cphBody$hfMonthsCounter" id="cphBody_hfMonthsCounter" value="1">
+    														<input type="hidden" name="ctl00$cphBody$hfDealPrice" id="cphBody_hfDealPrice" value="0.50">
+
+    														<input name="ctl00$cphBody$tbxMonthsCounter" type="text" value="1" readonly="readonly" id="cphBody_tbxMonthsCounter" class="form-control months-control required" data-placement="bottom">
+    														<a href="javascript:;" class="input-group-addon btn-plus"><span class="glyphicon glyphicon-plus"></span></a>
+    													</div>
+    													<span class="inline-element ">Your cost: <b>$<span class="cost">0.5</span> + HST</b></span>
+    												</div>
+    												<div class="form-group">
+    													<label>&nbsp;</label>
+    													<div class="input-group">
+    														<span id="cphBody_lblShowUntilLabel">Your deal will display until </span>
+    														<span id="cphBody_lblShowUntilText">August 31, 2018</span>
+    													</div>
+    												</div>
+
+    												<div class="form-group">
+    													<label for="cphBody_tbxExpiryDate" id="cphBody_lblExpiryDate">Until what date will you honour this deal? (Expiry Date)</label>
+    													<div class="input-group date">
+    														<input name="ctl00$cphBody$tbxExpiryDate" type="text" id="cphBody_tbxExpiryDate" class="form-control date-control expiryDate" data-placement="bottom" title="Enter your expiry date" placeholder="ex. Jul 31, 2019">
+    														<span class="input-group-addon"><img class="calendar-icon" src="/img/calendar-icon.png" alt=""></span>
+    													</div>
+    												</div>
+
+
+    												<button class="  nextBtn pull-right" type="button">Next Step</button>
+    											</div>
+    										</div>
+
+
+    										<div class=" right-narrow profile-side-info ">
+    											<p class="helpful-tips">Quick Preview</p>
+    											<div class="deal-item">
+    												<a class="deal-thumb">
+    													<figure>
+    														<img id="cphBody_imgQuickPreview" class="img-fluid preview-deal-image" onerror="LoadDefaultImage(this, '?preset=deal')" src="img/richmond-hill.jpg">
+    														<span class="savings preview-deal-saving position-absolute">25% off</span>
+    														<div class="text-center position-absolute div-caption">
+    															<p class="img-caption text-center">Richmond Hill <br> Country Club</p>
+    														</div>
+    													</figure>
+    												</a>
+    												
+    												<div class="deal-body">
+    													<h3>
+    														<a class="preview-deal-title">Save big on our gold package</a>
+    													</h3>
+    													<div class="clearfix">
+    														<div class="deal-price">
+    															<div class="old-price"><small><strike>Reg $1,000</strike></small></div>
+    															<div class="current-price">$750</div>
+    														</div>
+    														<div class="deal-price-button"><a class="btn"><small>Email this Vendor</small></a></div>
+    													</div>
+    												</div>
+    											</div>
+
+
+    										</div>
+    									</div>
+    								</div>
+
+
+    								<div class="panel panel-primary setup-content" id="step-2">
+    									<div class="panel-heading">
+    										<h3 class="panel-title">Checkout</h3>
+    									</div>
+    									<div class="panel-body">
+    										<div class="left-wide">
+
+    											<div class="plan-cost">
+    												<h3>CHECKOUT: ADD YOUR DEAL</h3>
+    												<ul>
+    													<li>Cost per month<span class="additional-cost">$1</span></li>
+    													<li>Number of months
+    														<div class="input-group deal-months-counter">
+    															<a href="javascript:;" class="input-group-addon btn-minuse"><span class="glyphicon glyphicon-minus"></span></a>
+    															<input type="hidden" name="ctl00$cphBody$hfMonthsCounter" id="cphBody_hfMonthsCounter" value="1">
+    															<input type="hidden" name="ctl00$cphBody$hfDealPrice" id="cphBody_hfDealPrice" value="0.50">
+    															<input name="ctl00$cphBody$tbxMonthsCounter" type="text" value="1" readonly="readonly" id="cphBody_tbxMonthsCounter" class="form-control months-control required" data-placement="bottom">
+    															<a href="javascript:;" class="input-group-addon btn-plus"><span class="glyphicon glyphicon-plus"></span></a>
+    														</div>
+    													</li>
+    													<li>
+    														<input type="hidden" name="ctl00$cphBody$hfShowUntil" id="cphBody_hfShowUntil" value="8/1/2018">
+
+    														Your deal will display until&nbsp;<span id="cphBody_lblShowUntilText" class="date-label">September 01, 2018</span>
+    													</li>
+
+    													<li>HST (13%)<span class="hst">$0.07</span></li>
+    													<li>Total Amount Debited Today<span class="total">$0.56</span></li>
+    												</ul>
+    											</div>
+    										</div>
+    										<div class="right-narrow">
+
+    											<div class="plan-cost">
+    												<h3>Your credit card info</h3>
+    												<div class="credit-card-info validationGroup">
+    													<input type="hidden" name="ctl00$cphBody$hfAmount" id="cphBody_hfAmount" value="0.56">
+    													<div class="form-group">
+    														<label for="cphBody_tbxCardNumber" id="cphBody_lblCardNumber">Card Number</label>
+    														<input name="ctl00$cphBody$tbxCardNumber" type="text" id="cphBody_tbxCardNumber" class="form-control required creditcard" title="Enter your Card Number" data-placement="bottom">
+    													</div>
+    													<p>
+    														<img src="https://www.torontocaterers.ca/img/admin/credit-cards.png" alt="">
+    													</p>
+
+    													<div class="form-group">
+    														<label for="cphBody_tbxCardholderName" id="cphBody_lblCardholderName">Cardholder’s Name</label>
+    														<input name="ctl00$cphBody$tbxCardholderName" type="text" id="cphBody_tbxCardholderName" class="form-control required" title="Enter your Cardholder Name" data-placement="bottom">
+    													</div>
+
+    													<div class="row">
+    														<div class="form-group col-sm-4 expire-outer">
+    															<label for="cphBody_ddlExpMonth" id="cphBody_lblExpMonth">Expiry Date</label>
+    															<select name="ctl00$cphBody$ddlExpMonth" id="cphBody_ddlExpMonth" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+    																<option value="1">JAN</option>
+    																<option value="2">FEB</option>
+    																<option value="3">MAR</option>
+    																<option value="4">APR</option>
+    																<option value="5">MAY</option>
+    																<option value="6">JUN</option>
+    																<option value="7">JUL</option>
+    																<option value="8">AUG</option>
+    																<option value="9">SEP</option>
+    																<option value="10">OCT</option>
+    																<option value="11">NOV</option>
+    																<option value="12">DEC</option>
+
+    															</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 55px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cphBody_ddlExpMonth-container"><span class="select2-selection__rendered" id="select2-cphBody_ddlExpMonth-container" title="JAN">JAN</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    														</div>
+
+    														<div class="form-group col-sm-4 expire-outer">
+    															<label for="cphBody_ddlExpYear" id="cphBody_lblExpYear">&nbsp;</label>
+    															<select name="ctl00$cphBody$ddlExpYear" id="cphBody_ddlExpYear" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+    																<option value="18">2018</option>
+    																<option value="19">2019</option>
+    																<option value="20">2020</option>
+    																<option value="21">2021</option>
+    																<option value="22">2022</option>
+    																<option value="23">2023</option>
+    																<option value="24">2024</option>
+
+    															</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 57px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cphBody_ddlExpYear-container"><span class="select2-selection__rendered" id="select2-cphBody_ddlExpYear-container" title="2018">2018</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    														</div>
+
+    														<div class="form-group col-sm-4 expire-outer">
+    															<label for="cphBody_tbxCvcCode" id="cphBody_lblCvc">CVC Code</label>
+    															<input name="ctl00$cphBody$tbxCvcCode" type="text" id="cphBody_tbxCvcCode" class="form-control required digits" title="Enter your CVC Code" data-placement="bottom">
+    														</div>
+
+    													</div>
+    													<div class="form-group col-sm-12">
+    														<input type="submit" name="ctl00$cphBody$btnBack" value="Back" onclick="onSubmitBack(this, event);" id="cphBody_btnBack" class="btn btn-grey ignore">
+    														<input type="submit" name="ctl00$cphBody$btnSubmitPayment" value="Submit" onclick="onSubmitPayment(this, event);" id="cphBody_btnSubmitPayment" class="btn btn-red payment-complete">
+    													</div>
+    												</div>
+    											</div>
+    										</div>
+    										<button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+    									</div>
+    								</div>
+
+    								<div class="panel panel-primary setup-content" id="step-3">
+
+    									<div class="panel-body">
+    										<div class="tab-form">
+    											<div class="thank-you-message text-center">
+    												<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+    													<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle>
+    													<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+    												</svg>
+    												<h4>You Are Done!!</h4>
+    												<p>YIt’s a done deal! Your deal post is now up and running <br/>
+    												courtesy of EventSource.ca!</p>
+    												<div class="form-group text-center">
+    													<a href="#" class="btn-submit ">Go to Deals page</a>
+    												</div>
+
+    											</div>
+    										</div>
+
+    									</div>
+    								</div>
+    							</div>
+
+
+    						</form>
+    					</div>
+
+    				</div>
+    				<!--/.Panel 2-->
+    				<!--Panel 3-->
+    				<div class="tab-pane fade" id="panel23" role="tabpanel">
+
+    					<h3 class="my-2 h5"><span><i class="fal fa-usd-square"></i></span>Add a Packge </h3>
+
+    					<div class="tab-content hidden-xs">
+    						<p>Showcase your best work and give Clients a strong sense of what you’re all about! When it comes to photos, we always recommend quality over quantity, but if you’d like a number to shoot for, aim for 20.</p>
+    					</div>
+
+
+
+
+    				</div>
+    				<!--/.Panel 3-->
+
+
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</section>
+<div class="fixed-buttons with-phone hidden-xs hasScrolled">
+	<div class="phone"><i class="fa fa-phone" aria-hidden="true"></i><span><b>Call us!</b> (416) 238-5555</span> </div>
+</div>
+<!-- /Start your project here-->
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/web-animations-2.3.1.min.js"></script>
+<script src="js/hammer-2.0.8.min.js"></script>
+<script src="js/muuri-0.6.2.js"></script>
+<!--<script src="js/jquery.gridly.js"></script>-->
+
+
+
+<script  src="js/popper.min.js"></script>
+<script  src="js/jquery.fancybox.min.js"></script>
+<!-- Inputmask -->
+<script  src="includes/jquery.inputmask.bundle.js"></script>
+<script  src="includes/inputmask/phone-codes/phone.js"></script>
+<script   src="includes/inputmask/phone-codes/phone-be.js"></script>
+<script   src="includes/inputmask/phone-codes/phone-ru.js"></script>
+   <!-- <script type="text/javascript" src="includes/inputmask/inputmask.phone.extensions.js"></script>
+   	<script type="text/javascript" src="includes/inputmask/phone-codes/phone.js"></script>-->
+
+   	<!-- Bootstrap tooltips -->
+
+   	<script src="js/select2.min.js"></script>
+   	<script src="js/fine-uploader.min.js"></script>
+   	<script src="js/datepicker.js"></script>
+   	<!-- Bootstrap core JavaScript -->
+   	<script src="js/bootstrap.min.js"></script>
+   	<script>
+    // Some options to pass to the uploader are discussed on the next page
+   /* var uploader = new qq.FineUploader({
+        element: document.getElementById("drag-and-drop-area")
+    })*/
+</script>
+<!-- MDB core JavaScript -->
+<script src="js/timepicker.js" ></script>
+<script src="js/datepair.js"  ></script>
+<!--   <script  src="js/mdb.min.js"></script>-->
+<script  src="js/main.js"></script>
+</body>
+
+</html>

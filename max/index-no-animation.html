@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> EventSource.ca |  Karen Jacobs Consulting Dashboard
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/jquery-ui.min.css" rel="stylesheet">-->
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="css/bootstrap-timepicker.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <!--<link href="css/mdb.min.css" rel="stylesheet">-->
+    <!-- Select2 -->
+    <link href="css/select2.css" rel="stylesheet" />
+    <link href="css/jquery.gridly.css" rel="stylesheet" />
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
+    <!-- FontAwesome 5 -->
+    <link href="css/fontawesome.css" rel="stylesheet">
+    <!-- barberpole styles   -->
+    <link href="css/barberpole.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- ckeditor -->
+    <script  src="js/ckeditor/ckeditor.js"></script>
+
+
+</head>
+
+<body>
+<div class="alert alert-danger text-center" role="alert">
+    <div class="container">
+        <div class="row  ">
+            <div class="col hidden-xs">
+                <span class="alert-icon-wrap "><i class="fas fa-exclamation"></i></span> Upgrade your Account in order to
+                unlock all EventSource features. Your access is currently limited.
+                <button type="button" class="close"   aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="col visible-xs">
+                  Upgrade your Account to unlock all features
+                <button type="button" class="close"   aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Start your project here-->
+    <header id="masthead" class="site-header logged"  >
+
+
+        <nav class="navbar navbar-default top-nav">
+            <div class="container">
+                <div class="col col-9 col-sm-3 navbar-header">
+                    <div class="row">
+                    <!--<button type="button" data-toggle="collapse" data-target="#main-menu" class="navbar-toggle main-toggle collapsed" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="btn btn-blue pull-right visible-xs visible-sm mt20">Get Listed</a>-->
+                    <a class="navbar-brand" href="#">
+                        <img src="img/svg/pro-network-logo.svg" alt="EventSource">
+                    </a>
+                    </div>
+                </div>
+                <div class=" col col-sm-2 upgarde-link">
+                     <a href="#">Get more exposure<br/>
+                    <span>Upgrade Now!</span></a>
+
+                </div>
+                <div id="main-menu" class="col col-3 col-sm-7 navbar-collapse" aria-expanded="false">
+                    <div class="header-top-right">
+                        <div class="dropdown-wrap vendor-profile">
+                            <a href="javascript:;" class="vend-name">
+
+                                <div class="listing-name">
+                                    <i class="fas fa-caret-down"></i> Karen Jacobs Consulting
+                                </div>
+                                <img id="VendorTopPane_imgPhoto" onerror="onErrorUserLogo(this)" src="https://www.torontocaterers.ca/listings/KarenJacobsConsulting/logo/logo.png?636661447625444156">
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                              <div class="dropdown-header">
+                                   <span class="vendor-name">Karen Jacobs Consulting</span>
+                                    <div>
+                                        <a class="view-profile" href="#">View my profile </a>                   <div class="acount-details"><a href="https://www.torontocaterers.ca/vendor/dashboard.aspx"> Account</a>         <a href="https://www.torontocaterers.ca/auth/logout.aspx">Log out</a></div>
+                                    </div>
+                              </div>
+                                <div class="dropdown-content">
+                                    <a class="col col-6" href="#"> <i class="fal fa-tachometer"></i> <span>Dashboard  </span> </a>
+                                    <a class="col col-6 active" href="#" > <i class="fal fa-store"></i> <span>Profile  </span> </a>
+                                    <a class="col col-6" href="#"> <i class="fal fa-box-usd"></i> <span>Deals & Packages  </span> </a>
+                                    <a class="col col-6" href="#"> <i class="fal fa-star"></i> <span>Reviews  </span> </a>
+                                </div>
+                                <div class="dropdown-footer">
+                                    <a href="account.html">Upgrade Now!</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav  primary-nav ">
+                        <li class="primary-nav-item"><a href="">Why EventSource.CA? </a></li>
+                        <li class="primary-nav-item"><a href="">Industry Corner</a></li>
+                        <li class="primary-nav-item"><a href="#" >Upcoming Events</a></li>
+
+                    </ul>
+
+                </div>
+                <div id="toggle">
+                    <span></span>
+
+
+                </div>
+            </div>
+            <!--<div id="search-suggestions">
+                <div class="container search-container">
+                    <i class="fa fa-search"></i>
+                    <input name="searchType" type="hidden">
+                    <input name="searchId" type="hidden">
+                    <input name="search" value="3" type="hidden">
+                    <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="typeahead txtSearch tt-hint" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: rgb(255, 255, 255) none repeat scroll 0% 0%;" readonly="readonly" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" type="text"><input class="typeahead txtSearch tt-input" name="listingName" placeholder="What are you searching for?" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" type="text"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Open Sans,sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-accounts"></div></div></span>
+                    <a class="close-ss" href="#"><i class="fa fa-times-thin"></i></a>
+                </div>
+            </div>-->
+        </nav>
+        <nav class="navbar bottom-navigation">
+            <div class="container">
+                <ul class="secondary-nav">
+                    <li class="secondary-nav-item"><a href="#"><i class="fal fa-tachometer"></i> Dashboard</a></li>
+                    <li class="secondary-nav-item  active"><a href="#"><i class="fal fa-store"></i> Profile</a></li>
+                    <li class="secondary-nav-item"><a href="account.html"><i class="fal fa-cog"></i> Account</a></li>
+                    <li class="secondary-nav-item"><a href="deal_package.html"><i class="fal fa-box-usd"></i> DealS & packages</a></li>
+                    <li class="secondary-nav-item"><a href="#"><i class="fal fa-star"></i> Reviews</a></li>
+                    <li class="secondary-nav-item"><a href="badges.html"><i class="fal fa-award"></i> badges</a></li>
+                    <li class="secondary-nav-item"><a href="#"><i class="fal fa-comment"></i> inquires</a></li>
+                </ul>
+                <div class="profile-progress">
+                    <p class="progress-text">Profile Completion: <span>0%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar  progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"  style="width:0%"></div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div id="popout">
+
+            <div class="popout-inner">
+               <div class="back-link">
+                <a href="#" >&lt; Back to EventSource.ca</a>
+               </div>
+                <ul class="nav  mobile-nav ">
+                    <li class="primary-nav-item"><a href="">Why EventSource.CA? </a></li>
+                    <li class="primary-nav-item"><a href="">Industry Corner</a></li>
+                    <li class="primary-nav-item"><a href="#" >Upcoming Events</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-3   left-column">
+                    <div class="company-photo ">
+                        <img src="img/profile-img.jpg" alt=""/>
+                        <a href="#">View my profile</a>
+                    </div>
+                    <ul class="nav  md-pills pills-primary flex-column" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel21" role="tab"><i class="fas fa-briefcase"></i>  Company Information </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  active" data-toggle="tab" href="#panel22" role="tab"><i class="fal fa-images"></i> Company images </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel23" role="tab"><i class="fal fa-cloud-upload"></i> Upload a PDF </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel24" role="tab"><i class="fal fa-question-circle"></i> FAQ’s </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel25" role="tab"><i class="fal fa-certificate"></i> Features & Highlights <span><i class="far fa-exclamation-circle"></i></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel26" role="tab"><i class="fal fa-users"></i> Rooms & Capacities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel27" role="tab"><i class="fal fa-calendar-alt"></i> Add an Event</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel28" role="tab"><i class="fal fa-handshake"></i> Preferred Vendors</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="wrapper-dropdwn">
+                        <div id="dd" class="wrapper-dropdown-2" tabindex="1"><span><i class="fas fa-briefcase"></i>  Company Information</span>
+                        <ul class="dropdown">
+                            <li><a data-toggle="tab" href="#panel21" role="tab"><i class="fas fa-briefcase"></i>  Company Information</i> </a> </li>
+                            <li><a data-toggle="tab" href="#panel22" role="tab"><i class="fal fa-images"></i> Company images </a></li>
+                            <li><a data-toggle="tab" href="#panel23" role="tab"><i class="fal fa-cloud-upload"></i> Upload a PDF </a> </li>
+                            <li><a data-toggle="tab" href="#panel24" role="tab"><i class="fal fa-question-circle"></i> FAQ’s </a></li>
+                            <li><a data-toggle="tab" href="#panel25" role="tab"><i class="fal fa-certificate"></i> Features & Highlights <span><i class="far fa-exclamation-circle"></i></span></a> </li>
+                            <li><a ata-toggle="tab" href="#panel26" role="tab"><i class="fal fa-users"></i> Rooms & Capacities</a> </li>
+                            <li><a data-toggle="tab" href="#panel27" role="tab"><i class="fal fa-calendar-alt"></i> Add an Event</a></li>
+                            <li><a data-toggle="tab" href="#panel28" role="tab"><i class="fal fa-handshake"></i> Preferred Vendors</a></li>
+                        </ul>
+                    </div>
+                    </div>
+
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-9 right-column">
+                    <!-- Tab panels -->
+                    <div class="tab-content vertical">
+                        <!--Panel 1-->
+                        <div class="tab-pane fade  " id="panel21" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fas fa-briefcase"></i></span> Edit Company Info</h3>
+
+                            <div class="tab-content hidden-xs">
+                                <p>Let’s start with the basics! Your Clients want to know the best ways they can connect with you and your company. If you prefer not
+                                to display your address in your profile, simply click ”Do not display my address”.</p>
+                            </div>
+
+                            <div class="tab-form">
+                                <div class="form-section">
+                                    <h4>Describe your business and services</h4>
+                                    <p>Provide a brief description of your business and services. <a  tabindex="0" data-trigger="focus" data-placement="bottom" data-toggle="popover"  data-content="And here's some amazing content. It's very engaging. Right?"> View an
+                                        example</a></p>
+                                    <textarea name="editor1"></textarea>
+                                    <script>
+                                        CKEDITOR.replace('editor1');
+
+
+                                    </script>
+                                </div>
+                                <div class="form-section">
+                                    <h4>Contact information</h4>
+                                    <p>Please complete all form fields below. <span class="hidden-xs">As a helpful option, we suggest uploading a friendly head shot to better personalize your profile.</span></p>
+
+                                    <div class="company-form validationGroup">
+                                        <input type="hidden" name="ctl00$cphBody$hfListingId" id="cphBody_hfListingId" value="6635">
+                                        <div class="form-group "><span class="is-loading"></span>
+
+                                            <input name="Name" type="text" value="Karen Jacobs" maxlength="100" readonly="readonly" id="Name" class="form-control ignore">
+                                            <span class="input-bottom"></span>
+                                            <i class="fa fa-check color--green "></i></div>
+                                        <hr>
+                                        <div class="form-group"><span class="is-loading"></span>
+                                            <input name="Address" type="text" maxlength="100" id="Address" class="form-control" data-field="Address" placeholder="Address">
+                                            <span class="input-bottom"></span>
+                                            <i class="fa fa-check color--green "></i></div>
+
+
+
+
+
+                                        <div class="form-group city-block">
+                                            <select name="City" id="City" tabindex="-1" class="required company-select-city valid " title="Select your City" data-placeholder="Select City" data-placement="bottom" data-field="City" aria-hidden="true">
+                                                <option value="">City</option>
+                                                <option value="19">Ajax</option>
+                                                <option value="26">Aurora</option>
+                                                <option value="1">Barrie</option>
+                                                <option selected="selected" value="13">Brampton</option>
+                                                <option value="32">Burlington</option>
+                                                <option value="15">Caledon</option>
+                                                <option value="33">Calgary</option>
+                                                <option value="11">Concord</option>
+                                                <option value="12">Georgina</option>
+                                                <option value="22">Halton Hills</option>
+                                                <option value="17">King</option>
+                                                <option value="8">Markham</option>
+                                                <option value="18">Milton</option>
+                                                <option value="7">Mississauga</option>
+                                                <option value="25">Nestleton</option>
+                                                <option value="23">Newmarket</option>
+                                                <option value="29">Oakville</option>
+                                                <option value="10">Orangeville</option>
+                                                <option value="27">Orillia</option>
+                                                <option value="21">Oshawa</option>
+                                                <option value="14">Pickering</option>
+                                                <option value="6">Richmond Hill</option>
+                                                <option value="28">Stouffville</option>
+                                                <option value="2">Toronto</option>
+                                                <option value="24">Uxbridge</option>
+                                                <option value="9">Vaughan</option>
+                                                <option value="20">Whitby</option>
+
+                                            </select>
+
+                                                <span class="postal-code">
+                                                    <span class="is-loading"></span>
+                                                    <input name="PostalCode" type="text" maxlength="10" id="PostalCode" placeholder="Postal code" class="form-control phone-ext postal-code-ext valid" data-field="Zip" data-placement="bottom" title="Enter postal code">
+                                                    <span class="input-bottom"></span>
+                                                    <i class="fa fa-check color--green "></i>
+                                                </span>
+
+                                        </div>
+                                        <p class="label-checkbox">
+                                            <input id="HideAddress" type="checkbox"  name="kHideAddress" data-field="IsAddressHidden">
+
+                                            <label for="HideAddress" id="lblHideAddress" class="inline-label">Do not display my address<span class="is-loading-checkbox"></span></label>
+                                        </p>
+                                        <hr>
+
+
+                                        <div class="form-group ">
+                                            <p class="upload-text">Upload a headshot <span class="optional">(optional)</span></p>
+                                            <div class="clearfix"></div>
+                                            <div class="input-narrow-image">
+                                                <div class="upload-thumb  new-thumb">
+                                                    <img src="img/avatar_normal2.png" class="  ava_normal" alt="" onerror="onErrorUserLogo(this);">
+                                                    <img src="img/avatar_hover2.png" class="  ava_hover" alt="" onerror="onErrorUserLogo(this);">
+                                                </div>
+                                            </div>
+
+                                           <div class="input-wide input-wide-extended">
+                                               <div class="form-group ">
+                                                   <span class="is-loading"></span>
+                                                   <input name="Person" type="text" placeholder="Contact person" maxlength="70" id="ContactPerson" class="form-control required valid" title="Enter your Full Name" data-placement="bottom" data-field="ContactPerson">
+                                                       <span class="input-bottom"></span>
+                                                </div>
+
+                                               <div class="form-group ">
+                                                    <span class="is-loading"></span>
+                                                    <input name="Title" type="text" placeholder="Title" maxlength="50" id="Title" class="form-control ignore" data-field="ContactTitle">
+                                                    <span class="input-bottom"></span>
+                                                </div>
+
+                                            </div>
+
+
+
+                                             </div>
+
+
+                                        <div class="form-group for-phone">
+
+                                            <span class="input-wide">
+                                                <span class="is-loading"></span>
+                                                <input name="Phone" type="text"  placeholder="Phone number" id="Phone" class="phoneRequired form-control phone valid" data-placement="bottom" data-field="Phone" data-inputmask="'mask': '(999) 999-9999'">
+                                                <span class="input-bottom"></span>
+
+                                           </span>
+
+                                            <span class="input-narrow">
+                                                <span class="is-loading"></span>
+
+                                                    <input name="PhoneExt" type="text" maxlength="4" id="PhoneExt" placeholder="Extension" class="ignore form-control phone-ext" data-placement="bottom" data-field="PhoneExt">
+                                                <span class="input-bottom"></span>
+                                            </span>
+                                            <i class="fa fa-check color--green "></i></div>
+
+                                        <div class="form-group"><span class="is-loading"></span>
+
+                                            <input name="Email" type="text" value="maksim.belous@gmail.com" placeholder="Email" maxlength="255" id="Email" class="emailAddress form-control valid" data-placement="bottom" data-is-vendor-email="1" data-field="Email">
+                                            <span class="input-bottom"></span>
+                                            <i class="fa fa-check color--green "></i></div>
+
+                                        <div class="form-group"><span class="is-loading"></span>
+
+                                            <input name="Website" type="text" value="https://www.pinterest.com/eventsourceca" placeholder="Website" maxlength="255" id="Website" class="urlRequired form-control valid" data-placement="bottom" data-field="HomePage">
+                                            <span class="input-bottom"></span>
+                                            <i class="fa fa-check color--green "></i></div>
+                                        <div class="form-group"><span class="is-loading"></span>
+
+                                            <input name="Category" type="text" value="Event Planners" readonly="readonly" id="Category" tabindex="-1" class="form-control ignore">
+                                            <span class="input-bottom"></span>
+                                            <i class="fa fa-check color--green "></i></div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Panel 1-->
+
+                        <!--Panel 2-->
+                        <div class="tab-pane fade in show active" id="panel22" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fal fa-images"></i></span>Company images</h3>
+                            <div class="tab-content hidden-xs">
+                                <p>Showcase your best work and give Clients a strong sense of what you’re all about! When it comes to photos, we always
+                                    recommend quality over quantity, but if you’d like a number to shoot for, aim for 20.</p>
+                            </div>
+
+                            <div class="tab-form">
+                                <div class="form-section company-form">
+
+                                        <div class="documents-group">
+                                            <h4>Company logo</h4>
+
+
+                                            <div class="form-group bottom-margin-minus">
+                                                <span class="label label-info upload-file" id="upload-file-logo">Upload photo</span>
+                                                <label class="btn-add upload form-control" for="my-logo-selector">
+                                                    <input id="my-logo-selector" type="file" accept="image/*" style="display:none"
+                                                           onchange="$('#upload-file-logo').html(this.files[0].name)">
+                                                    Upload
+                                                </label>
+                                                    <div class="company-logo">
+                                                        <img src="img/logo.png" alt="Karen Jacobs" />
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+
+                                        <div class="form-group">
+                                            <h4>Gallery images</h4>
+                                            <div class="drag-and-drop-area">
+                                                <div class="drag-and-drop-inner">
+                                                    <h4 class="hidden-xs">Drop Files Anywhere to Upload</h4>
+                                                    <p class="or-text hidden-xs">or</p>
+                                                    <div class="text-center">
+                                                        <div class="fileUpload">
+                                                            <p class="custom-para">Select Images</p>
+                                                            <input id="gallery-upload-btn" class="upload ignore" multiple="multiple" type="file"><div class="qq-uploader"><div class="qq-upload-drop-area"><span>Drop files here to upload</span></div><div class="qq-upload-button" style="position: relative; overflow: hidden; direction: ltr;"><div>Select Photo</div><input multiple="multiple" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;" type="file"></div><span class="qq-drop-processing"><span>Processing dropped files...</span><span class="qq-drop-processing-spinner"></span></span><ul class="qq-upload-list"></ul></div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div> <div id="uploader"></div>
+
+
+                                            <script type="text/template" id="qq-template">
+                                                <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Drop files here">
+                                                    <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+                                                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+                                                    </div>
+                                                    <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                                                        <span class="qq-upload-drop-area-text-selector"></span>
+                                                    </div>
+                                                    <div class="qq-upload-button-selector qq-upload-button">
+                                                        <div>Upload a file</div>
+                                                    </div>
+            <span class="qq-drop-processing-selector qq-drop-processing">
+                <span>Processing dropped files...</span>
+                <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+            </span>
+                                                    <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
+                                                        <li>
+                                                            <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                                                            <div class="qq-progress-bar-container-selector qq-progress-bar-container">
+                                                                <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                                                            </div>
+                                                            <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                                                            <div class="qq-thumbnail-wrapper">
+                                                                <img class="qq-thumbnail-selector" qq-max-size="120" qq-server-scale>
+                                                            </div>
+                                                            <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
+                                                            <button type="button" class="qq-upload-retry-selector qq-upload-retry">
+                                                                <span class="qq-btn qq-retry-icon" aria-label="Retry"></span>
+                                                                Retry
+                                                            </button>
+
+                                                            <div class="qq-file-info">
+                                                                <div class="qq-file-name">
+                                                                    <span class="qq-upload-file-selector qq-upload-file"></span>
+                                                                    <span class="qq-edit-filename-icon-selector qq-btn qq-edit-filename-icon" aria-label="Edit filename"></span>
+                                                                </div>
+                                                                <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                                                                <span class="qq-upload-size-selector qq-upload-size"></span>
+                                                                <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
+                                                                    <span class="qq-btn qq-delete-icon" aria-label="Delete"></span>
+                                                                </button>
+                                                                <button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
+                                                                    <span class="qq-btn qq-pause-icon" aria-label="Pause"></span>
+                                                                </button>
+                                                                <button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
+                                                                    <span class="qq-btn qq-continue-icon" aria-label="Continue"></span>
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                    <dialog class="qq-alert-dialog-selector">
+                                                        <div class="qq-dialog-message-selector"></div>
+                                                        <div class="qq-dialog-buttons">
+                                                            <button type="button" class="qq-cancel-button-selector">Close</button>
+                                                        </div>
+                                                    </dialog>
+
+                                                    <dialog class="qq-confirm-dialog-selector">
+                                                        <div class="qq-dialog-message-selector"></div>
+                                                        <div class="qq-dialog-buttons">
+                                                            <button type="button" class="qq-cancel-button-selector">No</button>
+                                                            <button type="button" class="qq-ok-button-selector">Yes</button>
+                                                        </div>
+                                                    </dialog>
+
+                                                    <dialog class="qq-prompt-dialog-selector">
+                                                        <div class="qq-dialog-message-selector"></div>
+                                                        <input type="text">
+                                                        <div class="qq-dialog-buttons">
+                                                            <button type="button" class="qq-cancel-button-selector">Cancel</button>
+                                                            <button type="button" class="qq-ok-button-selector">Ok</button>
+                                                        </div>
+                                                    </dialog>
+                                                </div>
+                                            </script>
+
+                                            <div class="readMoreContent">
+
+                                                <div class="example  ">
+                                                    <div id="sortable" class="sortable   ">
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class=" card-remove remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                        <option value="corporate-venues">Corporate Events</option>
+                                                                        <option value="social-venues">Social Events</option>
+                                                                        <option value="wedding-venues">Weddings</option>
+                                                                    </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="card-remove remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" sortable-element ui-state-default  ">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>
+                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                            <div class="readMoreTrigger">Show more <span class="fa fa-angle-down"> </span></div>
+                                        </div>
+
+
+
+                                        <div class="documents-group">
+                                            <hr>
+
+                                            <h4 class="nav nav-tabs-pils"><a href="#tab21" class="switch-tab active" data-toggle="tab">Upload profile background </a><span class="smaller">(Recommended)</span>&nbsp;<span class="class-or">OR</span>&nbsp;<a href="#tab22" class="switch-tab" data-toggle="tab">Choose from existing images</a></h4>
+
+                                            <div class="tab-content">
+
+                                                    <div class="tab-pane fade in show active" id="tab21" role="tabpanel">
+                                                        <p>Optionally specify a separate, higher resolution background image (min 1920x400px)</p>
+                                                        <div class="form-group">
+                                                            <span class="label label-info upload-file" id="upload-file-info2">Upload photo</span>
+                                                            <label class="btn-add upload form-control" for="my-file-selector2">
+                                                              <!--  <input id="my-file-selector2" type="file"  accept="image/*" style="display:none" onchange="$('#upload-file-info2').html(this.files[0].name); console.log(this.files);">-->
+                                                                <input id="my-file-selector2" type="file"  accept="image/*" style="display:none"  onchange="$('#upload-file-info2').html(this.files[0].name); ">
+                                                                Upload
+                                                            </label>
+
+                                                        </div>
+
+                                                        <div class="documents-list ">
+                                                           <div class="image-wrap">
+                                                                <img class="profile-uploaded" src="img/placeholder.jpg" alt=""/>
+                                                               <!-- <a href="#">Click to Preview</a>-->
+                                                           </div>
+                                                            <div class="room-delete">
+                                                                <div class="remove-wrapper form-control">
+                                                                    <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                                </div>
+                                                                <div class="preview-wrapper form-control">
+                                                                    <a href="#" class="preview-icon"><i class="far fa-eye"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade " id="tab22" role="tabpanel">
+
+                                                        <div class="form-group">
+                                                          <div class="uploaded-gallery-wrap">
+                                                            <div class="uploaded-gallery container">
+                                                                <div class="row">
+                                                                    <div class="column">
+                                                                      <a href="https://via.placeholder.com/630x300/abcdef/000000">
+                                                                        <img src="https://via.placeholder.com/125x100/abcdef/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/aaffff/00ff00">
+                                                                        <img src="https://via.placeholder.com/125x100/aaffff/00ff00" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffbbff/000000">
+                                                                        <img src="https://via.placeholder.com/125x100/ffbbff/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffcc/000000">
+                                                                        <img src="https://via.placeholder.com/125x100/ffffcc/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffdd/000000">
+                                                                        <img src="https://via.placeholder.com/125x100/ffffdd/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/abcdef/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/abcdef/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/aaffff/00ff00">
+                                                                            <img src="https://via.placeholder.com/125x100/aaffff/00ff00" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffbbff/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffbbff/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffcc/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffffcc/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffdd/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffffdd/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/abcdef/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/abcdef/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/aaffff/00ff00">
+                                                                            <img src="https://via.placeholder.com/125x100/aaffff/00ff00" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffbbff/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffbbff/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffcc/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffffcc/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffdd/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffffdd/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/abcdef/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/abcdef/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/aaffff/00ff00">
+                                                                            <img src="https://via.placeholder.com/125x100/aaffff/00ff00" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffbbff/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffbbff/000000" alt="" ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffcc/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffffcc/000000" alt=""  ></a>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <a href="https://via.placeholder.com/630x300/ffffdd/000000">
+                                                                            <img src="https://via.placeholder.com/125x100/ffffdd/000000" alt="" ></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                            <div class="documents-list ">
+                                                                <div class="image-wrap">
+                                                                    <img class="profile-uploaded2" src="img/placeholder.jpg" alt=""/>
+                                                                    <!-- <a href="#">Click to Preview</a>-->
+                                                                </div>
+                                                                <div class="room-delete">
+                                                                    <div class="remove-wrapper form-control">
+                                                                        <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                                    </div>
+                                                                    <div class="preview-wrapper form-control">
+                                                                        <a href="#" class="preview-icon"><i class="far fa-eye"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="alert alert-danger photo-danger text-center" role="alert">
+                                                            <div class="container">
+
+                                                                <div class="col ">
+                                                                    <span class="alert-icon-wrap "><i class="fas fa-exclamation"></i></span><span>This image is less smaller than recommended and may not look optimal in all resolutions. We recommend <a href="#">uploading a background image</a></span>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    <hr>
+                                    <div class="documents-group video-block">
+                                        <h4>Video<span class="small">Copy & Paste the video link from either YouTube or Vimeo</span></h4>
+                                        <div class="video-block-row">
+                                            <div class="form-group">
+                                                <div class="video-url-row">
+
+                                                <span class="input-wider video-url">
+                                                    <span class="is-loading"></span>
+                                                    <input name="video-url-1" type="text" placeholder="Video URL" id="video-url-1" class="video-url-input form-control ">
+                                                    <span class="input-bottom"></span>
+
+                                                </span>
+
+
+                                                    <div class="room-delete">
+                                                        <div class="remove-wrapper form-control">
+                                                            <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <i class="fa fa-check color--green "></i>
+                                                    </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="video-block-row">
+                                            <div class="form-group">
+                                                <div class="video-url-row">
+
+                                                <span class="input-wider video-url">
+                                                    <span class="is-loading"></span>
+                                                    <input name="video-url-1" type="text" placeholder="Video URL" id="video-url-2" class="video-url-input form-control ">
+                                                    <span class="input-bottom"></span>
+
+                                                </span>
+
+
+                                                    <div class="room-delete">
+                                                        <div class="remove-wrapper form-control">
+                                                            <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <i class="fa fa-check color--green "></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="video-block-row">
+                                            <div class="form-group">
+                                                <div class="video-url-row">
+
+                                                <span class="input-wider video-url">
+                                                    <span class="is-loading"></span>
+                                                    <input name="video-url-1" type="text" placeholder="Video URL" id="video-url-3" class="video-url-input form-control ">
+                                                    <span class="input-bottom"></span>
+
+                                                </span>
+
+
+                                                    <div class="room-delete">
+                                                        <div class="remove-wrapper form-control">
+                                                            <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <i class="fa fa-check color--green "></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <a href="javascript:;" class=" btn-add form-control">Add Video</a>
+                                    </div>
+
+                                    <script type="text/x-jquery-tmpl" id="addVideo">
+                                        <div class="video-block-row">
+                                            <div class="form-group">
+                                            <div class="video-url-row">
+
+                                            <span class="input-wider video-url">
+                                                <span class="is-loading"></span>
+                                                <input name="video-url-1" type="text" placeholder="Video URL" id="video-url-1" class="video-url-input form-control ">
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+
+
+                                                <div class="room-delete">
+                                                    <div class="remove-wrapper form-control">
+                                                        <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <i class="fa fa-check color--green "></i>
+                                                </div>
+
+                                        </div>
+                                        </div>
+                                    </script>
+
+                                    <hr>
+                                    <div class="documents-group">
+                                        <h4>Floor plan<span class="small">Upload jpg's or png's of your floor plans</span></h4>
+                                        <div class="form-group">
+                                            <span class="label label-info upload-file" id="upload-file-info3">Upload floor plan</span>
+                                            <label class="btn-add upload form-control" for="my-file-selector3">
+                                                <!--<input id="my-file-selector3" class="upload ignore" multiple="multiple" type="file"  accept="image/*" style="display:none" onchange="$('#upload-file-info3').html(this.files[0].name); ">-->
+                                                <input id="my-file-selector3" class="upload ignore" multiple="multiple" type="file"  accept="image/*" style="display:none"  >
+                                                Upload
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                    <div >
+                                    <div class="sortable-gallery ui-sortable ">
+                                        <div id="sortable3" class="sortable">
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <script type="text/x-jquery-tmpl" id="addGalleryblock">
+                                        <div class=" sortable-element brick small">
+                                                            <div class="sortable-inner">
+                                                                <div class="sortable-img-wrap">
+                                                                    <a  class="overlay"  href="img/image-wide.jpg" data-fancybox="images" >
+                                                                        <span class="info-text">Drag to Move / Click to Zoom</span>                                                                    </a>
+                                                                    <span class="remove-wrapper form-control">
+                                                                            <span href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></span>
+                                                                        </span>
+                                                                    <img src="img/image.jpg" alt=""/>
+                                                                </div>
+                                                                <div class="sortable-block">
+                                                                    <span class="company-fields form-group">
+                                                                        <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <input type="text" class="form-control " id="company-description-1" placeholder="Add a description" >
+                                                                    </span>
+                                                                <span class="company-album-block form-group">
+                                                                    <span class="is-loading no-margin" style="width: 100%;"></span>
+                                                                        <select id="company-album-6" multiple="" class="album-select required "  >
+                                                                            <option value="corporate-venues">Corporate Events</option>
+                                                                            <option value="social-venues">Social Events</option>
+                                                                            <option value="wedding-venues">Weddings</option>
+                                                                        </select>
+
+                                                                        <i class="fa fa-check color--green animation-hide animation-hidden"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                    </script>
+                                    <script>
+                                        function handleFileSelect(evt) {
+                                            var files = evt.target.files; // FileList object
+
+                                            // Loop through the FileList and render image files as thumbnails.
+                                            for (var i = 0, f; f = files[i]; i++) {
+
+                                                // Only process image files.
+                                                if (!f.type.match('image.*')) {
+                                                    continue;
+                                                }
+
+                                                var reader = new FileReader();
+
+                                                // Closure to capture the file information.
+                                                reader.onload = (function(theFile) {
+                                                    return function(e) {
+                                                        // Render thumbnail.
+                                                        var span = document.createElement('div');
+                                                        span.className = ' sortable-element brick small';
+                                                        span.innerHTML = ['<div class="sortable-inner">' +
+                                                        '<div class="sortable-img-wrap">' +
+                                                        '<div class="overlay">' +
+                                                        '<span class="">Drag to Move / Click to Zoom</span>' +
+                                                        '<div class="remove-wrapper form-control">' +
+                                                        '<a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>' +
+                                                        '</div>' +
+                                                        '</div><img src="', e.target.result,
+                                                            '" title="', escape(theFile.name), '"/></div>' +
+                                                            '<div class="sortable-block">' +
+                                                            '<span class="company-fields form-group">' +
+                                                            '<span class="is-loading no-margin" style="width: 100%;"></span>' +
+                                                            '<input type="text" class="form-control " id="company-description-1" placeholder="Add a description">' +
+                                                            '</span>' +
+                                                            '<i class="fa fa-check color--green animation-hide animation-hidden"></i></span>'].join('');
+                                                        document.getElementById('sortable').insertBefore(span, null);
+                                                        (function() {
+                                                            $(function() {
+
+
+
+                                                                return $('.gridly').gridly();
+
+
+                                                            });
+
+                                                        }).call(this);
+                                                    };
+                                                })(f);
+
+                                                // Read in the image file as a data URL.
+                                                reader.readAsDataURL(f);
+                                            }
+                                        }
+
+                                        function handleFileSelect2(evt) {
+                                            var files = evt.target.files; // FileList object
+
+                                            // Loop through the FileList and render image files as thumbnails.
+                                            for (var i = 0, f; f = files[i]; i++) {
+
+                                                // Only process image files.
+                                                if (!f.type.match('image.*')) {
+                                                    continue;
+                                                }
+
+                                                var reader = new FileReader();
+
+                                                // Closure to capture the file information.
+                                                reader.onload = (function(theFile) {
+                                                    return function(e) {
+                                                        // Render thumbnail.
+                                                        var span = document.createElement('div');
+                                                        span.className = 'sortable-element ui-state-default ui-sortable-handle';
+                                                        span.innerHTML = ['<div class="sortable-inner">' +
+                                                        '<div class="sortable-img-wrap">' +
+                                                        '<div class="overlay">' +
+                                                        '<div class="remove-wrapper form-control">' +
+                                                        '<a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>' +
+                                                        '</div>' +
+                                                        '</div><img src="', e.target.result,
+                                                            '" title="', escape(theFile.name), '"/></div>' +
+                                                            '<div class="sortable-block">' +
+                                                            '<span class="company-fields form-group">' +
+                                                            '<span class="is-loading no-margin" style="width: 100%;"></span>' +
+                                                            '<input type="text" class="form-control " id="company-description-1" placeholder="Add a description">' +
+                                                            '</span>' +
+                                                            '<i class="fa fa-check color--green animation-hide animation-hidden"></i></span>'].join('');
+                                                        document.getElementById('sortable3').insertBefore(span, null);
+                                                    };
+                                                })(f);
+
+                                                // Read in the image file as a data URL.
+                                                reader.readAsDataURL(f);
+                                            }
+                                        }
+                                        document.getElementById('gallery-upload-btn').addEventListener('change', handleFileSelect, false);
+                                        document.getElementById('my-file-selector3').addEventListener('change', handleFileSelect2, false);
+                                    </script>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--/.Panel 2-->
+                        <!--Panel 3-->
+                        <div class="tab-pane fade" id="panel23" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fal fa-cloud-upload"></i></span>Upload a PDF </h3>
+
+                            <div class="tab-content hidden-xs">
+                                <p>Showcase your best work and give Clients a strong sense of what you’re all about! When it comes to photos, we always recommend quality over quantity, but if you’d like a number to shoot for, aim for 20.</p>
+                            </div>
+
+                            <div class="tab-form">
+                                <div class="form-section">
+                                    <div class="company-form validationGroup">
+                                    <div class="documents-group">
+                                        <h4>Attach a PDF Package &nbsp;<span>Include up to 5 PDFs (max 5MB per file)</span></h4>
+
+
+                                        <div class="form-group">
+                                            <span class="label label-info upload-file" id="upload-file-info">Upload PDF</span>
+                                            <label class="btn-add upload form-control" for="my-file-selector">
+                                                <input id="my-file-selector" type="file" accept="application/pdf"  style="display:none"
+                                                       onchange="$('#upload-file-info').html(this.files[0].name)">
+                                                Upload
+                                            </label>
+
+                                        </div>
+                                        <div class="documents-list">
+                                            <div class="form-group" data-id="1">
+                                                <label class="document-filename">
+                                                    <i class="fal fa-paperclip  " aria-hidden="true"></i>attachement number 1.pdf
+                                                </label>
+                                                <a href="javascript:;" data-image-id="1" data-type="documents" class="document-remove" onclick="removeFileByName(this);"><i class="far fa-trash-alt"></i></a>
+                                            </div>
+                                            <div class="form-group" data-id="2">
+                                                <label class="document-filename">
+                                                    <i class="fal fa-paperclip " aria-hidden="true"></i>attachement number 2.pdf
+                                                </label>
+                                                <a href="javascript:;" data-image-id="2" data-type="documents" class="document-remove" onclick="removeFileByName(this);"><i class="far fa-trash-alt"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--/.Panel 3-->
+                        <!--Panel 4-->
+                        <div class="tab-pane fade " id="panel24" role="tabpanel">
+                        <div class="faq-block-single2">
+
+
+                            <h3 class="my-2 h5"><span><i class="fas fa-question-circle"></i></span>FAQ’s </h3>
+                            <div class="tab-content hidden-xs">
+                                <p>Get Clients invested with your company by answering any number of these frequently asked questions. If you see a question you prefer not to omit or you feel it doesn't apply, simply skip over it. Any unanswered FAQs will not display in your profile. In general, the more information you can share about your company, the better the quality of inquiries you will receive.</p>
+                            </div>
+
+
+                            <div class="tab-form faq-form">
+
+                                <div class="form-section">
+
+                                    <div class="company-form validationGroup">
+
+                                        <div id="timepair"  class="form-group time-restrictions">
+                                            <h4>Are there any time restrictions? <sub>Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="time-wrap">
+                                                <div class="input-narrow no-left-margin request-guestNumber  request-eventTime">
+                                                    <p>Set up time can start at</p>
+                                                        <span class="is-loading"></span>
+                                                       <!-- <input name="eventTime" title="Enter Desired Time" data-placement="bottom"  type="text" value="" placeholder="12:00"  class="room-name-input form-control "  >-->
+                                                        <input id="eventTime" class="  form-control required" name="eventTime" data-placement="bottom" placeholder="12:00"  value="">
+                                                    <span class="input-bottom"></span>
+                                                    <span class="input-group-addon"> <img class="time-icon" src="img/time.png" alt="">                     </span>
+                                                </div>
+                                                <div class="input-narrow request-guestNumber  request-eventTime">
+                                                    <p>Events must end by</p>
+                                                    <span class="is-loading"></span>
+                                                    <input name="eventTime2" title="Enter Desired Time" data-placement="bottom"  type="text" value="" placeholder="12:00" id="eventTime2" class="room-name-input form-control "  >
+                                                    <span class="input-bottom"></span>
+                                                    <span class="input-group-addon"> <img class="time-icon" src="img/time.png" alt="">                     </span>
+                                                </div>
+                                            </div>
+                                            <div class="remove-for-radio remove-time">
+                                                <div class="remove-wrapper checked-true" data-field="remove-answer" data-val="10">
+                                                    <a href="javascript:;" class="remove-icon"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What other amenities are available? <sub >Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="amenity1" type="checkbox"  name="amenity1"  >
+
+                                                    <label for="amenity1" id="lblamenity1" class="inline-label"><span>Dressing Area </span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="amenity2" type="checkbox" name="amenity2"  >
+
+                                                    <label for="amenity2" id="lblamenity2" class="inline-label"><span>Coat Check</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="amenity3" type="checkbox" name="amenity3"  >
+
+                                                    <label for="amenity3" id="lblamenity3" class="inline-label"><span>On-site parking</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="amenity4" type="checkbox" name="amenity4"  >
+
+                                                    <label for="amenity4" id="lblamenity4" class="inline-label"><span>Overnight Accommodations</span></label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What event items can your venue provide directly? <sub >Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems1" type="checkbox"  name="otheritems1"  >
+
+                                                    <label for="otheritems1" id="lblotheritems1" class="inline-label"><span>Audio Visual Equipment</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems2" type="checkbox" name="otheritems2"  >
+
+                                                    <label for="otheritems2" id="lblotheritems2" class="inline-label"><span>Barware</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems3" type="checkbox" name="otheritems3"  >
+
+                                                    <label for="otheritems3" id="lblotheritems3" class="inline-label"><span>Chairs</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems4" type="checkbox" name="otheritems4"  >
+
+                                                    <label for="otheritems4" id="lblotheritems4" class="inline-label"><span>China</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems5" type="checkbox"  name="otheritems5"  >
+
+                                                    <label for="otheritems5" id="lblotheritems5" class="inline-label"><span>Audio Visual Equipment</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems6" type="checkbox" name="otheritems6"  >
+
+                                                    <label for="otheritems6" id="lblotheritems6" class="inline-label"><span>Dance Floor</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems7" type="checkbox" name="otheritems7"  >
+
+                                                    <label for="otheritems7" id="lblotheritems7" class="inline-label"><span>Decor</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems8" type="checkbox" name="otheritems8"  >
+
+                                                    <label for="otheritems8" id="lblotheritems8" class="inline-label"><span>Drapery</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems9" type="checkbox"  name="otheritems9"  >
+
+                                                    <label for="otheritems9" id="lblotheritems9" class="inline-label"><span>Flatware</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems10" type="checkbox" name="otheritems10"  >
+
+                                                    <label for="otheritems10" id="lblotheritems10" class="inline-label"><span>Furniture</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems11" type="checkbox" name="otheritems11"  >
+
+                                                    <label for="otheritems11" id="lblotheritems11" class="inline-label"><span>Glassware</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems12" type="checkbox" name="otheritems12"  >
+
+                                                    <label for="otheritems12" id="lblotheritems12" class="inline-label"><span>Lighting</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems13" type="checkbox"  name="otheritems13"  >
+
+                                                    <label for="otheritems13" id="lblotheritems13" class="inline-label"><span>Linens</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="otheritems14" type="checkbox" name="otheritems14"  >
+
+                                                    <label for="otheritems14" id="lblotheritems14" class="inline-label"><span>Tables</span> </label>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What type of dining options are available? <sub >Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="diningoption1" type="checkbox"  name="diningoption1"  >
+
+                                                    <label for="diningoption1" id="lbldiningoption1" class="inline-label"><span>Buffet</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="diningoption2" type="checkbox" name="diningoption"  >
+
+                                                    <label for="diningoption2" id="lbldiningoption2" class="inline-label"><span>Cocktail Reception</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="diningoption3" type="checkbox" name="diningoption3"  >
+
+                                                    <label for="diningoption3" id="lbldiningoption3" class="inline-label"><span>Family Style</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="diningoption4" type="checkbox" name="diningoption4"  >
+
+                                                    <label for="diningoption4" id="lbldiningoption4" class="inline-label"><span>Food Stations</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="diningoption5" type="checkbox" name="diningoption5"  >
+
+                                                    <label for="diningoption5" id="lbldiningoption5" class="inline-label"><span>Plated Menu</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="diningoption6" type="checkbox" name="diningoption6"  >
+
+                                                    <label for="diningoption6" id="lbldiningoption6" class="inline-label"><span>Tasting Menu</span></label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What type of bar options are available? <sub >Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="baroption1" type="checkbox"  name="baroption1"  >
+
+                                                    <label for="baroption1" id="lblbaroption1" class="inline-label"><span>Open Bar</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="baroption2" type="checkbox" name="baroption2"  >
+
+                                                    <label for="baroption2" id="lblbaroption2" class="inline-label"><span>Cash Bar</span></label>
+                                                </p>
+                                                <p class="label-checkbox label-check-wide">
+                                                    <input id="baroption3" type="checkbox" name="baroption3"  >
+
+                                                    <label for="baroption3" id="lblbaroption3" class="inline-label"><span>Bartenders are included in the starting price for all bar options.</span></label>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What transportation and access is available? <sub >Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="transportation1" type="checkbox"  name="transportation1"  >
+
+                                                    <label for="transportation1" id="lbltransportation1" class="inline-label"><span>On-Site</span></label>
+                                                </p>
+                                                 <p class="label-checkbox">
+                                                    <input id="transportation2" type="checkbox"  name="transportation2"  >
+
+                                                    <label for="transportation2" id="lbltransportation2" class="inline-label"><span>Off-Site Parking</span></label>
+                                                </p>
+                                                 <p class="label-checkbox">
+                                                    <input id="transportation3" type="checkbox"  name="transportation3"  >
+
+                                                    <label for="transportation3" id="lbltransportation3" class="inline-label"><span>Free Parking</span></label>
+                                                </p>
+                                                 <p class="label-checkbox">
+                                                    <input id="transportation4" type="checkbox"  name="transportation4"  >
+
+                                                    <label for="transportation4" id="lbltransportation4" class="inline-label"><span>Paid Parking </span></label>
+                                                </p>
+                                                 <p class="label-checkbox">
+                                                    <input id="transportation5" type="checkbox"  name="transportation5"  >
+
+                                                    <label for="transportation5" id="lbltransportation5" class="inline-label"><span>Valet</span></label>
+                                                </p>
+                                                 <p class="label-checkbox">
+                                                    <input id="transportation6" type="checkbox"  name="transportation6"  >
+
+                                                    <label for="transportation6" id="lbltransportation6" class="inline-label"><span>Shuttle</span></label>
+                                                </p>
+                                                 <p class="label-checkbox">
+                                                    <input id="transportation7" type="checkbox"  name="transportation7"  >
+
+                                                    <label for="transportation7" id="lbltransportation7" class="inline-label"><span>Wheelchair Access</span></label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>Do you have a rental fee or a minimum spend requirement? <sub>Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <div class="with-radio">
+
+                                                    <div class="input-wrap label-checkbox">
+                                                        <input type="radio" name="group_27" class="ignore" data-val="yes" id="rb_Yes_27" data-field="answer_124"  >
+                                                        <label for="rb_Yes_27">Yes </label>
+                                                    </div>
+
+                                                    <div class="input-wrap label-checkbox">
+                                                        <input type="radio" name="group_27" class="ignore" data-val="no" id="rb_No_27" data-field="answer_124">
+                                                        <label for="rb_No_27">No </label>
+                                                    </div>
+
+                                                </div>
+                                                <div class="remove-for-radio">
+                                                    <div class="remove-wrapper checked-true" data-field="remove-answer" data-val="10">
+                                                        <a href="javascript:;" class="remove-icon"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What services are typically included in your fees? <sub >Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded1" type="checkbox"  name="typicalyincluded1"  >
+
+                                                    <label for="typicalyincluded1" id="lbltypicalyincluded1" class="inline-label"><span>Bridal Suite</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded2" type="checkbox"  name="typicalyincluded2"  >
+
+                                                    <label for="typicalyincluded2" id="lbltypicalyincluded2" class="inline-label"><span>Set Up</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded3" type="checkbox"  name="typicalyincluded3"  >
+
+                                                    <label for="typicalyincluded3" id="lbltypicalyincluded3" class="inline-label"><span>Clean Up</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded4" type="checkbox"  name="typicalyincluded4"  >
+
+                                                    <label for="typicalyincluded4" id="lbltypicalyincluded4" class="inline-label"><span>Tables</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded5" type="checkbox"  name="typicalyincluded5"  >
+
+                                                    <label for="typicalyincluded5" id="lbltypicalyincluded5" class="inline-label"><span>Parking</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded6" type="checkbox"  name="typicalyincluded6"  >
+
+                                                    <label for="typicalyincluded6" id="lbltypicalyincluded6" class="inline-label"><span>Chairs</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded7" type="checkbox"  name="typicalyincluded7"  >
+
+                                                    <label for="typicalyincluded7" id="lbltypicalyincluded7" class="inline-label"><span>Linens</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded8" type="checkbox"  name="typicalyincluded8"  >
+
+                                                    <label for="typicalyincluded8" id="lbltypicalyincluded8" class="inline-label"><span>China</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded9" type="checkbox"  name="typicalyincluded9"  >
+
+                                                    <label for="typicalyincluded9" id="lbltypicalyincluded9" class="inline-label"><span>Flatware</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded10" type="checkbox"  name="typicalyincluded10"  >
+
+                                                    <label for="typicalyincluded10" id="lbltypicalyincluded10" class="inline-label"><span>Glassware</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded11" type="checkbox"  name="typicalyincluded11"  >
+
+                                                    <label for="typicalyincluded11" id="lbltypicalyincluded11" class="inline-label"><span>Lighting/Sound </span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="typicalyincluded12" type="checkbox"  name="typicalyincluded12"  >
+
+                                                    <label for="typicalyincluded12" id="lbltypicalyincluded12" class="inline-label"><span>Valet</span> </label>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>Do you have a site fee for wedding ceremonies at your venue? <sub>Pending</sub> <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <div class="with-radio">
+
+                                                    <div class="input-wrap label-checkbox">
+                                                        <input type="radio" name="group_28" class="ignore" data-val="yes" id="rb_Yes_28" data-field="answer_124"  >
+                                                        <label for="rb_Yes_28">Yes </label>
+                                                    </div>
+
+                                                    <div class="input-wrap label-checkbox">
+                                                        <input type="radio" name="group_28" class="ignore" data-val="no" id="rb_No_28" data-field="answer_124"  >
+                                                        <label for="rb_No_28">No </label>
+                                                    </div>
+
+                                                </div>
+                                                <div class="remove-for-radio">
+                                                    <div class="remove-wrapper checked-true" data-field="remove-answer" data-val="10">
+                                                        <a href="javascript:;" class="remove-icon"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>What is the starting site fee for wedding ceremonies during peak season?<sub >Pending</sub>   <i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-narrow no-left-margin">
+                                                <span class="is-loading"></span>
+                                                <span class="currencyinput"><span>$</span> <input name="starting-fee" type="text" placeholder="0.00" id="starting-fee" class="starting-fee form-control "  ></span>
+                                                <span class="input-bottom"></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group faq-block-single">
+                                            <h4>Which of the following are included in the starting price for bar service? <sub >Pending</sub><i class="fa fa-check color--green "></i></h4>
+                                            <div class="input-check-group">
+                                                <p class="label-checkbox">
+                                                    <input id="includedstartingprice1" type="checkbox"  name="includedstartingprice1"  >
+
+                                                    <label for="includedstartingprice1" id="lblincludedstartingprice1" class="inline-label"><span>House Beer</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="includedstartingprice2" type="checkbox"  name="includedstartingprice2"  >
+
+                                                    <label for="includedstartingprice2" id="lblincludedstartingprice2" class="inline-label"><span>House Wine</span></label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="includedstartingprice3" type="checkbox"  name="includedstartingprice3"  >
+
+                                                    <label for="includedstartingprice3" id="lblincludedstartingprice3" class="inline-label"><span>House Liquor</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="includedstartingprice4" type="checkbox"  name="includedstartingprice4"  >
+
+                                                    <label for="includedstartingprice4" id="lblincludedstartingprice4" class="inline-label"><span>Signature Drinks</span> </label>
+                                                </p>
+                                                <p class="label-checkbox">
+                                                    <input id="includedstartingprice5" type="checkbox"  name="includedstartingprice5"  >
+
+                                                    <label for="includedstartingprice5" id="lblincludedstartingprice5" class="inline-label"><span>Bartenders</span> </label>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!--/.Panel 4-->
+                        <!--Panel 5-->
+                        <div class="tab-pane fade" id="panel25" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fal fa-certificate"></i></span>Features & Highlights </h3>
+                            <div class="tab-content hidden-xs">
+                                <p>Let’s start with the basics! Your Clients want to know the best ways they can connect with you and your company. If you prefer not to display your address in your profile, simply click ”Do not display my address”.</p>
+                            </div>
+                            <div class="tab-form">
+
+                                <div class="form-section">
+
+                                    <div class="company-form validationGroup">
+                                    <div class="form-group">
+                                        <h4>Venue Features<i class="fa fa-check color--green "></i></h4>
+                                        <div class="input-check-group">
+                                            <p class="label-checkbox">
+                                                <input id="feature1" type="checkbox" checked="checked" name="feature1"  >
+
+                                                <label for="feature1" id="lblfeature1" class="inline-label"><span>On-Site Ceremonies</span> </label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature2" type="checkbox" checked="checked" name="feature2" >
+
+                                                <label for="feature2" id="lblfeature2" class="inline-label"><span>Wi-Fi</span> </label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature3" type="checkbox" checked="checked" name="feature3" >
+
+                                                <label for="feature3" id="lblfeature3" class="inline-label"><span>Wheelchair Access</span></label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature4" type="checkbox" checked="checked" name="feature4" >
+
+                                                <label for="feature4" id="lblfeature4" class="inline-label"><span>Outdoor Facilities</span></label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature5" type="checkbox" checked="checked" name="feature5" >
+
+                                                <label for="feature5" id="lblfeature5" class="inline-label"><span>Free Parking</span></label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature6" type="checkbox"  name="feature6" >
+
+                                                <label for="feature6" id="lblfeature6" class="inline-label"><span>On-site A/V</span></label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature7" type="checkbox"  name="feature7" >
+
+                                                <label for="feature7" id="lblfeature7" class="inline-label"><span>Unique View</span></label>
+                                            </p>
+                                            <p class="label-checkbox">
+                                                <input id="feature8" type="checkbox"  name="feature8" >
+
+                                                <label for="feature8" id="lblfeature8" class="inline-label"><span>Unique View</span></label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4>Highlights</h4>
+
+
+                                    <div class="form-group">
+                                        <p class="upload-text">Year Established</p>
+                                        <div class="input-narrow no-left-margin">
+                                            <span class="is-loading"></span>
+                                            <input name="year-est" type="text" value="1990" placeholder="Year Established" id="year-est" class="room-name-input form-control  valid"  >
+                                            <span class="input-bottom"></span>
+                                            <i class="fa fa-check color--green "></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group no-bottom-margin">
+
+
+                                        <div class="input-narrow no-left-margin">
+                                            <select name="range-select"  title="Typical Range" id="range" class=" selectpicker"  >
+                                                <option value="range" selected>Typical Range</option>
+                                                <option value="starting">Starting At</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-wide margin-left amount-range">
+                                            <div class="for-range for-range-from">
+                                                <span class="pre-amount">$</span>
+                                                <div class="input-wrap">
+                                                    <span class="is-loading"></span>
+                                                    <input name="range-from" type="text"  id="range-from" class="room-name-input form-control  valid"  >
+                                                    <span class="input-bottom"></span>
+                                                </div>
+                                            </div>
+                                            <div class="for-range for-range-to">
+                                                <span class="pre-amount">to</span>
+                                                <div class="input-wrap">
+                                                    <span class="is-loading"></span>
+                                                    <input name="range-to" type="text"  id="range-to" class="room-name-input form-control  valid"  >
+                                                    <span class="input-bottom"></span>
+                                                </div>
+                                            </div>
+                                            <p class="label-checkbox">
+                                                <input id="per-person" type="checkbox"  name="per-person"  >
+
+                                                <label for="per-person" id="lblper-person" class="inline-label">Per Person </label>
+                                            </p>
+                                        </div>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+
+                                    <p class="lighter-text text-range-from">Recommended: Including an approximate price range can dramatically increase conversion rate.</p>
+
+                                        <div class="alert alert-danger photo-danger text-center lighter-text text-range-to" role="alert">
+                                            <div class="container">
+
+                                                <div class="col ">
+                                                    <span class="alert-icon-wrap "><i class="fas fa-exclamation"></i></span><span>"Starting At" gives Clients only a vague sense of your pricing. We suggest using the "Typical Range" feature where possible.</a></span>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.Panel 5-->
+                        <!--Panel 6-->
+                        <div class="tab-pane fade" id="panel26" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fal fa-users"></i></span> Rooms & Capacities</h3>
+                            <div class="tab-content hidden-xs">
+                                <p>Let’s start with the basics! Your Clients want to know the best ways they can connect with you and your company. If you prefer not
+                                    to display your address in your profile, simply click ”Do not display my address”.</p>
+                            </div>
+
+                            <div class="tab-form">
+                                <h4>Room Names & Capacities</h4>
+                                <div class="company-form validationGroup">
+                                    <div class="rooms-block">
+                                        <div class="room-block-heading">
+                                            <div class="room-name"><span>Room Name</span></div>
+                                            <div class="room-seats"><span><span class="hidden-xs">Max Seated</span><span class="visible-xs">Min</span></span></div>
+                                            <div class="room-standing"><span><span class="hidden-xs">Max Standing</span><span class="visible-xs">Max</span></span></div>
+                                            <div class="room-delete"><span></span></div>
+                                        </div>
+                                        <div class="room-block-row">
+                                            <div class="form-group ">
+
+                                            <span class="input-narrow room-name">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-name-1" type="text" value="Georgian" placeholder="Room name" id="room-name-1" class="room-name-input form-control  valid"  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+                                            <span class="input-narrow room-seats">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-seated-1" type="text" value="350" maxlength="4"  placeholder="Max seated" id="room-seated-1" class="room-seated-input form-control"  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+                                            <span class="input-narrow room-standing">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-standing" type="text" value="425" maxlength="4" placeholder="Max standing" id="room-standed-1" class="room-seated-input-max form-control" >
+                                                <span class="input-bottom"></span>
+                                            </span>
+                                             <div class="room-delete">
+                                                <div class="remove-wrapper form-control">
+                                                    <a href="javascript:;" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                             </div>
+                                                <i class="fa fa-check color--green "></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="room-block-row">
+                                            <div class="form-group ">
+
+                                            <span class="input-narrow room-name">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-name-2" type="text" placeholder="Room name" id="room-name-2" class="room-name-input form-control  valid"  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+                                            <span class="input-narrow room-seats">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-seated-2" type="text" maxlength="4"  placeholder="Max seated" id="room-seated-2" class="room-seated-input form-control  valid"  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+                                            <span class="input-narrow room-standing">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-standing" type="text" maxlength="4" placeholder="Max standing" id="room-standed-2" class="room-seated-input-max ignore form-control  " >
+                                                <span class="input-bottom"></span>
+                                            </span>
+                                                <div class="room-delete">
+                                                    <div class="remove-wrapper form-control">
+                                                        <a href="javascript:;" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <i class="fa fa-check color--green "></i>
+                                            </div>
+                                        </div>
+                                        <a href="javascript:;" class=" btn-add form-control">Add Room</a>
+                                    </div>
+                                    </div>
+                                <script type="text/x-jquery-tmpl" id="addRoom">
+                                        <div class="room-block-row">
+                                            <div class="form-group ">
+
+                                            <span class="input-narrow room-name">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-name-2" type="text" placeholder="Room name" id="room-name-2" class="room-name-input form-control "  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+                                            <span class="input-narrow room-seats">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-seated-2" type="text" maxlength="4"  placeholder="Max seated" id="room-seated-2" class="room-seated-input form-control"  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+                                            <span class="input-narrow room-standing">
+                                                <span class="is-loading"></span>
+                                                <input name="Room-standing" type="text" maxlength="4" placeholder="Max standing" id="room-standed-2" class="room-seated-input-max  form-control  " >
+                                                <span class="input-bottom"></span>
+                                            </span>
+                                                <div class="room-delete">
+                                                    <div class="remove-wrapper form-control">
+                                                        <a href="" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <i class="fa fa-check color--green "></i>
+                                            </div>
+                                        </div>
+                                </script>
+
+
+                            </div>
+                        </div>
+                        <!--/.Panel 6-->
+                        <!--Panel 7-->
+                        <div class="tab-pane fade" id="panel27" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fal fa-calendar-alt"></i></span>Add an Event</h3>
+                            <div class="tab-form">
+                                <h4>Have an Event Coming Up?</h4>
+                                <p>We'll help you get the word out!</p>
+                                <div class="company-form validationGroup event-form ">
+                                    <div class="right-side visible-xs">
+                                        <div class="form-group">
+                                            <div class="documents-list ">
+                                                <div class="image-wrap">
+                                                    <img class="event-uploaded" src="img/placeholder4.jpg" alt="">
+                                                    <!-- <a href="#">Click to Preview</a>-->
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="label label-info upload-file" id="upload-event-file-label">Attach a photo</span>
+                                            <label class="btn-add upload form-control" for="upload-event-file">
+                                                <input id="upload-event-file" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info2').html(this.files[0].name); ">
+                                                Attach a photo
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="left-side">
+                                    <div class="form-group "><span class="is-loading"></span>
+
+                                        <input name="evant" type="text" value="Richmond Hill Country Club" maxlength="100" readonly="readonly" id="event-place" class="form-control ignore">
+                                        <span class="input-bottom"></span>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+                                    <div class="form-group ">
+                                        <span class="is-loading"></span>
+                                        <input name="event-Person" type="text" placeholder="Contact person" maxlength="70" id="eventPerson" class="form-control required valid" title="Enter your Full Name" >
+                                        <span class="input-bottom"></span>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+                                    <div class="form-group">
+                                       <div class="input-half-left">
+                                           <span class="is-loading"></span>
+                                        <input name="Email" type="text" value="maksim.belous@gmail.com" placeholder="Email" maxlength="255" id="eventEmail" class="emailAddress form-control valid" >
+                                        <span class="input-bottom"></span>
+
+                                       </div>
+                                        <div class="input-half-right">
+                                                <span class="is-loading"></span>
+                                                <input name="Phone" type="text"  placeholder="Phone number" id="eventPhone" class="phoneRequired form-control phone valid" data-placement="bottom" data-field="Phone" data-inputmask="'mask': '(999) 999-9999'">
+                                                <span class="input-bottom"></span>
+
+                                           </div>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+                                    <div class="form-group ">
+                                        <span class="is-loading"></span>
+                                        <input name="event-name" type="text" placeholder="Name of Event" maxlength="70" id="eventName" class="form-control required valid" title="Name of Event" >
+                                        <span class="input-bottom"></span>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+
+
+                                    <div class="form-group"><span class="is-loading"></span>
+                                        <input name="venueName" type="text" maxlength="100" id="venueName" class="form-control" data-field="venueName" placeholder="Name of Venue">
+                                        <span class="input-bottom"></span>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+
+                                        <div class="form-group input-group date request-eventDate">
+                                            <input id="eventDate2"
+                                                   type="text"
+                                                   class="eventDate form-control required"
+                                                   title="Enter Event Date" name="eventDate"
+                                                   data-placement="bottom"
+                                                   placeholder="Date of Event" value=""> <span
+                                                class="input-group-addon">                         <i class="far fa-calendar-alt"></i>         </span>
+                                            <i class="fa fa-check color--green"></i>
+                                        </div>
+
+                                    <div class="form-group  ">
+                                        <p>Time of Event</p>
+                                        <div id="timepair2" class="form-group time-restrictions">
+
+                                            <div class="input-narrow no-left-margin event-start-time  request-eventTime">
+
+                                                <span class="is-loading"></span>
+                                                <input id="eventTime3" class="form-control required" name="eventTime3" data-placement="bottom" placeholder="12:00" value="">
+                                                <span class="input-bottom"></span>
+                                                <span class="input-group-addon"> <img class="time-icon" src="img/time.png" alt="">                     </span>
+                                            </div>
+                                            <div class="between-inputs"><span>to</span></div>
+                                            <div class="input-narrow event-end-time  request-eventTime">
+
+                                                <span class="is-loading"></span>
+                                                <input name="eventTime4" title="Enter Desired Time" data-placement="bottom" type="text" value="" placeholder="12:00" id="eventTime4" class="room-name-input form-control">
+                                                <span class="input-bottom"></span>
+                                                <span class="input-group-addon"> <img class="time-icon" src="img/time.png" alt="">                     </span>
+                                            </div>
+                                            <i class="fa fa-check color--green "></i>
+                                        </div>
+
+                                    </div>
+                                        <div class="form-group  ">
+
+                                                <textarea class="form-control about-event" placeholder="Include a Description of your Event"></textarea>
+                                            </div>
+
+
+
+                                    <div class="form-group ">
+                                        <p class="upload-text">Tag Other Vendors who are a part of this Event</p>
+                                        <div class="clearfix"></div>
+                                        <div class="event-block">
+                                            <div class="pro-block-row">
+                                                <div class="form-group ">
+                                                    <div class="pro-logo"><img src="img/placeholder3.jpg" alt=""></div>
+                                                    <span class="input-narrow pro-name">
+                                                        <span class="is-loading"></span>
+                                                        <input name="pro-name-1" type="text" value="Grand Luxe Event Boutique"
+                                                               placeholder="Pro name" id="pro-tag-name-1"
+                                                               class="room-name-input form-control ">
+                                                        <span class="input-bottom"></span>
+
+                                                    </span>
+                                                    <div class="pro-delete">
+                                                        <div class="remove-wrapper form-control">
+                                                            <a href="javascript:;" class="remove-icon"><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <i class="fa fa-check color--green "></i>
+                                                </div>
+                                            </div>
+
+
+                                            <a href="javascript:;" class=" btn-add form-control">Add vendor</a>
+                                        </div>
+                                    </div>
+                                        <hr>
+
+
+                                    <div class="form-group ">
+                                        <span class="is-loading"></span>
+                                            <input name="rsvpLink" type="text" placeholder="RSVP Link or RSVP Email Address (leave blank if not required)" id="rsvpLink" class="form-control required valid" title="RSVP Link or RSVP Email Address " >
+                                        <span class="input-bottom"></span>
+                                        <i class="fa fa-check color--green "></i>
+                                    </div>
+                                        <div class="form-group city-block">
+                                            <span class="is-loading"></span>
+                                            <select name="Audience" id="audience" class="audience company-select-city" title="Select a target Audience" data-placeholder="Select a target Audience" >
+                                                <option value="">Select a target Audience</option>
+                                                <option value="1">I only want the industry to know about this event</option>
+                                                <option value="2">I want everybody to know bout this event</option>
+
+
+                                            </select>
+                                            <i class="fa fa-check color--green "></i>
+
+
+                                        </div>
+                                        <hr>
+                                        <div class="form-group text-right">
+                                                                <button class="btn-submit">Submit event</button>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="right-side hidden-xs">
+                                        <div class="form-group">
+                                            <div class="documents-list ">
+                                                <div class="image-wrap">
+                                                    <img class="event-uploaded" src="img/placeholder4.jpg" alt="">
+                                                    <!-- <a href="#">Click to Preview</a>-->
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="label label-info upload-file" id="upload-event-file-label">Attach a photo</span>
+                                            <label class="btn-add upload form-control" for="upload-event-file">
+                                                <input id="upload-event-file" type="file" accept="image/*" style="display:none" onchange="$('#upload-file-info2').html(this.files[0].name); ">
+                                                Attach a photo
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--/.Panel 7-->
+                        <!--Panel 8-->
+                        <div class="tab-pane fade" id="panel28" role="tabpanel">
+
+                            <h3 class="my-2 h5"><span><i class="fal fa-handshake"></i></span>Preferred Vendors </h3>
+                            <div class="tab-content hidden-xs">
+                                <p>Let’s start with the basics! Your Clients want to know the best ways they can connect with you and your company. If you prefer not
+                                    to display your address in your profile, simply click ”Do not display my address”.</p>
+                            </div>
+
+                            <div class="tab-form">
+                                <h4>Pros I know <span>Give a shoutout to some of your favourite GTA vendors.</span></h4>
+                                <div class="company-form validationGroup pro-form">
+                                    <div class="pro-block">
+                                        <div class="pro-block-heading">
+                                            <div class="pro-name"><span>Pro Name</span></div>
+                                            
+                                            <div class="room-delete"><span></span></div>
+                                            <div class="pro-logo"> </div>
+                                        </div>
+                                        <div class="pro-block-row">
+                                            <div class="form-group ">
+
+                                            <span class="input-narrow pro-name">
+                                                <span class="is-loading"></span>
+                                                <input name="pro-name-1" type="text" value="Grand Luxe Event Boutique" placeholder="Pro name" id="pro-name-1" class="room-name-input form-control "  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+
+                                                <div class="pro-delete">
+                                                    <div class="remove-wrapper form-control">
+                                                        <a href="javascript:;" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="pro-logo"><img src="img/grandlux.png" alt="" ></div>
+                                                <i class="fa fa-check color--green "></i>
+                                            </div>
+                                        </div>
+                                        <div class="pro-block-row">
+                                            <div class="form-group ">
+
+                                            <span class="input-narrow pro-name">
+                                                <span class="is-loading"></span>
+                                                <input name="pro-name-1" type="text" value="Purple Tree Wedding  Photography" placeholder="Pro name" id="pro-name-2" class="room-name-input form-control "  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+
+                                                <div class="pro-delete">
+                                                    <div class="remove-wrapper form-control">
+                                                        <a href="javascript:;" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="pro-logo"><img src="img/purple.png" alt="" ></div>
+                                                <i class="fa fa-check color--green "></i>
+                                            </div>
+                                        </div>
+                                        <div class="pro-block-row">
+                                            <div class="form-group ">
+
+                                            <span class="input-narrow pro-name">
+                                                <span class="is-loading"></span>
+                                                <input name="pro-name-1" type="text" value="Secrets Floral Collection" placeholder="Pro name" id="pro-name-3" class="room-name-input form-control "  >
+                                                <span class="input-bottom"></span>
+
+                                            </span>
+
+                                                <div class="pro-delete">
+                                                    <div class="remove-wrapper form-control">
+                                                        <a href="javascript:;" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="pro-logo"><img src="img/logo-placeholder2.jpg" alt=""></div>
+                                                <i class="fa fa-check color--green "></i>
+                                            </div>
+                                        </div>
+                                        <a href="javascript:;" class=" btn-add form-control">Add Pro</a>
+                                    </div>
+                                    <script type="text/x-jquery-tmpl" id="addPro">
+                                        <div class="pro-block-row">
+                                                <div class="form-group ">
+                                                <span class="input-narrow pro-name">
+                                                    <span class="is-loading"></span>
+                                                    <input name="pro-name-1" type="text"  placeholder="Pro name" id="pro-name-1" class="room-name-input form-control "  >
+                                                    <span class="input-bottom"></span>
+
+                                                </span>
+
+                                                    <div class="pro-delete">
+                                                        <div class="remove-wrapper form-control">
+                                                            <a href="javascript:;" class="remove-icon"  ><i class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pro-logo"><img src="img/logo-placeholder.jpg" ></div>
+                                                    <i class="fa fa-check color--green "></i>
+                                                </div>
+                                            </div>
+                                    </script>
+                                    <script type="text/x-jquery-tmpl" id="addEventVendor">
+                                        <div class="pro-block-row">
+                                                <div class="form-group ">
+                                                    <div class="pro-logo"><img src="img/placeholder3.jpg" alt=""></div>
+                                                    <span class="input-narrow pro-name">
+                                                        <span class="is-loading"></span>
+                                                        <input name="pro-name-1" type="text" value="Grand Luxe Event Boutique"
+                                                               placeholder="Pro name" id="pro-tag-name-1"
+                                                               class="room-name-input form-control ">
+                                                        <span class="input-bottom"></span>
+
+                                                    </span>
+                                                    <div class="pro-delete">
+                                                        <div class="remove-wrapper form-control">
+                                                            <a href="javascript:;" class="remove-icon"><i
+                                                                    class="far fa-trash-alt"></i></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <i class="fa fa-check color--green "></i>
+                                                </div>
+                                            </div>
+                                    </script>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--/.Panel 8-->
+                        <div class="company-photo  ">
+                            <img src="img/profile-img.jpg" alt=""/>
+                            <a href="#">View my profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed-buttons with-phone hidden-xs hasScrolled">
+        <div class="phone"><i class="fa fa-phone" aria-hidden="true"></i><span><b>Call us!</b> (416) 238-5555</span> </div>
+    </div>
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/web-animations-2.3.1.min.js"></script>
+    <script src="js/hammer-2.0.8.min.js"></script>
+    <script src="js/muuri-0.6.2.js"></script>
+    <!--<script src="js/jquery.gridly.js"></script>-->
+
+
+
+    <script  src="js/popper.min.js"></script>
+    <script  src="js/jquery.fancybox.min.js"></script>
+    <!-- Inputmask -->
+    <script  src="includes/jquery.inputmask.bundle.js"></script>
+    <script  src="includes/inputmask/phone-codes/phone.js"></script>
+    <script   src="includes/inputmask/phone-codes/phone-be.js"></script>
+    <script   src="includes/inputmask/phone-codes/phone-ru.js"></script>
+   <!-- <script type="text/javascript" src="includes/inputmask/inputmask.phone.extensions.js"></script>
+    <script type="text/javascript" src="includes/inputmask/phone-codes/phone.js"></script>-->
+
+    <!-- Bootstrap tooltips -->
+
+    <script src="js/select2.min.js"></script>
+    <script src="js/fine-uploader.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+<script>
+    // Some options to pass to the uploader are discussed on the next page
+   /* var uploader = new qq.FineUploader({
+        element: document.getElementById("drag-and-drop-area")
+    })*/
+</script>
+    <!-- MDB core JavaScript -->
+<script src="js/timepicker.js" ></script>
+<script src="js/datepair.js"  ></script>
+<script src="js/clipboard.min.js"  ></script>
+ <!--   <script  src="js/mdb.min.js"></script>-->
+<script  src="js/main.js"></script>
+</body>
+
+</html>
