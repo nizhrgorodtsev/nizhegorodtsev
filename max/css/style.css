@@ -830,7 +830,9 @@ body {
         margin-top: 15px;
     }
 }
-
+.preview-deal-title{
+    text-transform: capitalize;
+}
 
 .tab-form {
     border:1px solid #d9d9d9;
@@ -2788,7 +2790,6 @@ ul.select2-choices:after {
 
     .deal-item-padding{
     padding-left: 30px !important;
-    padding-right: 45px;
     }
 
     .profile-details-form h2 {
