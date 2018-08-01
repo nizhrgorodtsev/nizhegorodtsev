@@ -831,6 +831,7 @@ body {
     }
 }
 
+
 .tab-form {
     border:1px solid #d9d9d9;
     padding: 30px 40px 0;
@@ -2785,6 +2786,11 @@ ul.select2-choices:after {
         overflow: hidden;
     }
 
+    .deal-item-padding{
+    padding-left: 30px !important;
+    padding-right: 45px;
+    }
+
     .profile-details-form h2 {
         color: #1a1a1a;
         text-transform: uppercase;
@@ -3607,3 +3613,4 @@ textarea::selection { background: #fff;;  }
         width: calc(100% - 155px);
     }
 }
+
